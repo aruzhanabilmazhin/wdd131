@@ -1,13 +1,36 @@
-/* Large Screen Styles */
+/* Navigation Menu - Large Screens */
 .nav-menu {
-    justify-content: center;
-  }
-  
-  .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-  
-  .hamburger {
-    display: none;
-  }
+    display: flex; /* Ensure the nav menu is displayed as flex */
+    flex-direction: row; /* Align menu items horizontally */
+    justify-content: center; /* Center the menu items */
+    gap: 20px; /* Add spacing between menu items */
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+    background-color: #4CAF50; /* Example background color */
+}
+
+.nav-menu a {
+    color: white; /* Menu item text color */
+    text-decoration: none; /* Remove underline */
+    padding: 0.5rem 1rem; /* Add padding for clickable area */
+    border-radius: 5px; /* Optional rounded corners */
+}
+
+.nav-menu a:hover {
+    background-color: #45a049; /* Change background on hover */
+}
+
+/* Gallery Styles - Large Screens */
+.gallery {
+    display: grid; /* Use grid layout for the gallery */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
+    gap: 20px; /* Space between grid items */
+}
+
+/* Hamburger Menu - Hidden on Large Screens */
+.hamburger {
+    display: none; /* Hide the hamburger menu */
+}
+
   
