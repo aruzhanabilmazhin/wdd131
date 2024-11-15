@@ -1,0 +1,13 @@
+/* Large Screen Styles */
+.nav-menu {
+    justify-content: center;
+  }
+  
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .hamburger {
+    display: none;
+  }
+  
