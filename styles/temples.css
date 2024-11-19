@@ -1,46 +1,25 @@
-/* Hamburger Menu */
-.hamburger {
-  display: block;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
+/* Initially hide the menu on small screens */
 .nav-menu {
-  display: none; /* Hidden by default for mobile view */
+  display: none;
   flex-direction: column;
-  gap: 10px;
-  background-color: #4CAF50;
-  padding: 1rem;
-  list-style: none;
+  background-color: #fff;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-.nav-menu.active {
-  display: flex; /* Show menu when active */
+/* Show the menu when the "visible" class is added */
+.nav-menu.visible {
+  display: flex;
 }
 
-.nav-menu a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem;
-  border-radius: 5px;
-}
-
-.nav-menu a:hover {
-  background-color: #45a049;
-}
-
-/* Larger Screens */
-@media screen and (min-width: 768px) {
-  .hamburger {
-    display: none; /* Hide hamburger button on larger screens */
-  }
-
+/* Ensure the menu is always visible on larger screens */
+@media (min-width: 768px) {
   .nav-menu {
     display: flex;
+    position: static;
     flex-direction: row;
-    gap: 20px;
   }
 }

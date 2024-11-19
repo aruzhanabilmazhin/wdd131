@@ -1,5 +1,17 @@
-// Get the current year
-document.getElementById("currentyear").textContent = new Date().getFullYear();
+document.addEventListener("DOMContentLoaded", () => {
+    // Dynamic year and last modified date
+    const yearSpan = document.getElementById("year");
+    const lastModifiedSpan = document.getElementById("last-modified");
 
-// Get last modified date of the document
-document.getElementById("lastModified").textContent = "Last modified: " + document.lastModified;
+    yearSpan.textContent = new Date().getFullYear();
+    lastModifiedSpan.textContent = document.lastModified;
+
+    // Hamburger menu toggle
+    const hamburger = document.getElementById("hamburger");
+    const menu = document.getElementById("menu");
+
+    hamburger.addEventListener("click", () => {
+        menu.classList.toggle("show");
+        hamburger.textContent = menu.classList.contains("show") ? "✖" : "☰";
+    });
+});

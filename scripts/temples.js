@@ -1,13 +1,20 @@
-// Select hamburger button and navigation menu
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("menu");
 
-// Add event listener for the hamburger button
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('active'); // Toggle menu visibility
-  hamburger.textContent = navMenu.classList.contains('active') ? 'X' : '☰'; // Toggle button text
+  // Toggle menu visibility on hamburger button click
+  hamburger.addEventListener("click", () => {
+    menu.classList.toggle("visible");
+
+    // Optional: Add a class to the body to adjust layout for mobile view
+    document.body.classList.toggle("menu-open");
+  });
+
+  // Display current year in footer
+  const currentYear = new Date().getFullYear();
+  document.getElementById("currentYear").textContent = currentYear;
+
+  // Display last modified date in footer
+  const lastModified = document.lastModified;
+  document.getElementById("lastModified").textContent = `Last Modified: ${lastModified}`;
 });
-
-// Footer dynamic updates
-document.getElementById("currentYear").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = "Last modified: " + document.lastModified;
