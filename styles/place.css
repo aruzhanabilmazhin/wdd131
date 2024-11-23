@@ -1,58 +1,64 @@
+/* Global Variables */
 :root {
-    --primary-color: #ff4500;
-    --secondary-color: #f5f5f5;
-    --text-color: #333;
-    --padding: 16px;
-    --border-radius: 8px;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    color: var(--text-color);
+    --primary-color: #005f73;
+    --secondary-color: #0a9396;
+    --accent-color: #94d2bd;
+    --font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    line-height: 1.6;
     margin: 0;
-    padding: 0;
-    background-color: white;
-}
-
-header {
+    background-color: #e9d8a6;
+    color: var(--primary-color);
+  }
+  
+  header {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: var(--padding);
-}
-
-.hero-image {
+    padding: 1rem 0;
+  }
+  
+  .hero {
+    text-align: center;
+  }
+  
+  .hero-img {
     width: 100%;
     height: auto;
-}
-
-.weather, .highlights {
-    margin: var(--padding);
-    padding: var(--padding);
-    background-color: var(--secondary-color);
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.weather .icon {
-    content: url('images/weather-icon.svg'); /* SVG for mobile view */
-}
-
-@media (min-width: 768px) {
-    main {
-        display: flex;
-        justify-content: space-between;
-        gap: var(--padding);
-    }
-
-    .weather .icon {
-        content: "⛅"; /* Emoticon for desktop view */
-    }
-}
-
-footer {
+  }
+  
+  .weather, .attractions {
+    padding: 1rem;
+  }
+  
+  .weather h2 .emoticon {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+  }
+  
+  footer {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: var(--padding);
-}
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    main {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 1rem;
+    }
+  
+    .hero {
+      grid-column: span 2;
+    }
+  }
+  

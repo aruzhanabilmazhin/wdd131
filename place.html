@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Japan</title>
-    <meta name="description" content="Discover the culture, weather, and highlights of Japan.">
-    <link rel="stylesheet" href="styles/place.css">
-    <script defer src="scripts/place.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the beauty of Japan. Learn about the weather, attractions, and culture.">
+  <meta name="author" content="Aruzhan Abilmazhin">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/place.css">
+  <title>Explore Japan</title>
 </head>
 <body>
-    <header>
-        <h1>Explore Japan</h1>
-        <picture>
-            <source srcset="images/hero-large.webp" media="(min-width: 768px)">
-            <img src="images/hero-small.webp" alt="Scenic view of Japan" class="hero-image">
-        </picture>
-    </header>
+  <header>
+    <h1>Welcome to Japan</h1>
+  </header>
 
-    <main>
-        <section class="weather">
-            <h2>Weather <span class="icon"></span></h2>
-            <p>Temperature: <span id="temperature">10°C</span></p>
-            <p>Wind Speed: <span id="windSpeed">15 km/h</span></p>
-            <p>Wind Chill: <span id="windChill">N/A</span></p>
-        </section>
+  <main>
+    <section class="hero">
+      <picture>
+        <source srcset="images/hero-large.webp" media="(min-width: 768px)">
+        <img src="images/hero-small.webp" alt="Scenic view of Japan" class="hero-img">
+      </picture>
+    </section>
 
-        <section class="highlights">
-            <h2>Highlights</h2>
-            <ul>
-                <li>🌸 Experience the Cherry Blossoms</li>
-                <li>🗻 Visit Mount Fuji</li>
-                <li>🎎 Enjoy Tokyo’s Vibrant Culture</li>
-                <li>🍣 Savor Authentic Sushi</li>
-            </ul>
-        </section>
-    </main>
+    <section class="weather">
+      <h2>Weather <span class="emoticon" aria-hidden="true">⛅</span></h2>
+      <p>Temperature: <span id="temperature">10°C</span></p>
+      <p>Wind Speed: <span id="wind-speed">15 km/h</span></p>
+      <p>Wind Chill: <span id="wind-chill">Calculating...</span></p>
+    </section>
 
-    <footer>
-        <p>&copy; <span id="currentYear"></span> Explore Japan. All Rights Reserved.</p>
-        <p>Last Modified: <span id="lastModified"></span></p>
-    </footer>
+    <section class="attractions">
+      <h2>Attractions</h2>
+      <ul>
+        <li>Beautiful Beaches</li>
+        <li>Mountain Hiking Trails</li>
+        <li>Cultural Festivals</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="current-year"></span> | Last modified: <span id="last-modified"></span></p>
+  </footer>
+  <script src="scripts/place.js" defer></script>
 </body>
 </html>

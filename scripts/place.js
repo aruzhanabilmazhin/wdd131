@@ -1,24 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const temperature = 10; // in °C
-    const windSpeed = 15; // in km/h
-    const windChillElement = document.getElementById("windChill");
+// Current Year and Last Modified
+document.getElementById("current-year").textContent = new Date().getFullYear();
+document.getElementById("last-modified").textContent = document.lastModified;
 
-    function calculateWindChill(temp, wind) {
-        return (
-            13.12 +
-            0.6215 * temp -
-            11.37 * Math.pow(wind, 0.16) +
-            0.3965 * temp * Math.pow(wind, 0.16)
-        ).toFixed(1);
-    }
+// Calculate Wind Chill
+function calculateWindChill(temp, windSpeed) {
+  return (
+    13.12 +
+    0.6215 * temp -
+    11.37 * Math.pow(windSpeed, 0.16) +
+    0.3965 * temp * Math.pow(windSpeed, 0.16)
+  ).toFixed(1);
+}
 
-    if (temperature <= 10 && windSpeed > 4.8) {
-        windChillElement.textContent = `${calculateWindChill(temperature, windSpeed)}°C`;
-    } else {
-        windChillElement.textContent = "N/A";
-    }
+// Static Weather Data
+const temperature = 10; // °C
+const windSpeed = 15; // km/h
 
-    // Footer dynamic updates
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = document.lastModified;
-});
+if (temperature <= 10 && windSpeed > 4.8) {
+  document.getElementById("wind-chill").textContent = calculateWindChill(
+    temperature,
+    windSpeed
+  ) + "°C";
+} else {
+  document.getElementById("wind-chill").textContent = "N/A";
+}
