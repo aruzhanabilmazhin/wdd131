@@ -1,27 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Filtered Temples</title>
+  <meta name="author" content="Aruzhan Abilmazhin"> <!-- Add your name -->
+  <meta name="description" content="Filtered Temples Album - A dynamic display of temples with filtering options.">
+  <title>Filtered Temples Album</title> <!-- Improved title -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header>
+    <h1>Temple Filter Album</h1> <!-- Added the required h1 -->
     <nav>
-      <button id="filter-home">Home</button>
-      <button id="filter-old">Old</button>
-      <button id="filter-new">New</button>
-      <button id="filter-large">Large</button>
-      <button id="filter-small">Small</button>
+      <ul>
+        <li><a href="#" id="old">Old Temples</a></li>
+        <li><a href="#" id="new">New Temples</a></li>
+        <li><a href="#" id="large">Large Temples</a></li>
+        <li><a href="#" id="small">Small Temples</a></li>
+        <li><a href="#" id="home">Home</a></li>
+      </ul>
     </nav>
   </header>
   <main>
-    <section id="temple-cards" class="temple-cards"></section>
+    <h2>Filtered Temple Results</h2> <!-- Added h2 inside main -->
+    <div id="temple-cards"></div>
   </main>
   <footer>
-    <p>&copy; <span id="year"></span> - Last modified: <span id="last-modified"></span></p>
+    <p>&copy; <span id="current-year"></span> Aruzhan Abbilmazhin | Last Modified: <span id="last-modified"></span></p>
   </footer>
-  <script src="js/filtered-temples.js"></script>
+  <script src="scripts/filtered-temples.js" defer></script> <!-- Added defer -->
 </body>
 </html>
