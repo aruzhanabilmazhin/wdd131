@@ -1,0 +1,25 @@
+label, legend {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  input, select, textarea, button {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background: #5cb85c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  button:hover {
+    background: #4cae4c;
+  }
