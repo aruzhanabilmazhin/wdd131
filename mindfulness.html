@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Aruzhan Abilmazhin">
+  <meta name="description" content="A calming hub for mindfulness and relaxation with guided exercises, articles, and interactive tools.">
+  <title>Mindfulness and Relaxation Hub</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <h1>Welcome to the Mindfulness and Relaxation Hub</h1>
+      <p>Your sanctuary for mental well-being and self-care.</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="introduction">
+      <h2>About Mindfulness</h2>
+      <div class="content">
+        <img src="images/mindfulness-intro.jpg" alt="Serene mindfulness scene" class="section-image">
+        <p>Mindfulness is the practice of being present in the moment, reducing stress, and enhancing emotional balance. It can help you lead a more fulfilling, focused, and calm life.</p>
+      </div>
+    </section>
+
+    <section id="exercises">
+      <h2>Guided Exercises</h2>
+      <div class="content">
+        <img src="images/deep-breathing.jpg" alt="Woman practicing deep breathing" class="section-image">
+        <ul>
+          <li><strong>Deep Breathing:</strong> Learn to calm your mind with rhythmic breathing techniques.</li>
+          <li><strong>Reflective Journaling:</strong> Reflect on your emotions and thoughts to enhance clarity.</li>
+          <li><strong>Simple Meditation:</strong> Practice moments of stillness to reset your mind and body.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="blog">
+      <h2>Mindfulness Blog</h2>
+      <div class="content">
+        <img src="images/blog-mindfulness.jpg" alt="Articles and tips about mindfulness" class="section-image">
+        <p>Explore articles on managing stress, improving focus, and incorporating mindfulness into your daily routine. Discover tips and techniques to create a mindful lifestyle.</p>
+      </div>
+    </section>
+
+    <section id="interactive">
+      <h2>Interactive Features</h2>
+      <div class="content">
+        <img src="images/interactive-tools.jpg" alt="Mindfulness tools on a tablet" class="section-image">
+        <p>Try our tools to enhance your mindfulness practice:</p>
+        <button id="tipButton" class="btn">Get a Daily Mindfulness Tip</button>
+        <p id="dailyTip"></p>
+
+        <button id="affirmationButton" class="btn">Show a Positive Affirmation</button>
+        <p id="affirmation"></p>
+      </div>
+    </section>
+
+    <section id="form">
+      <h2>Share Your Thoughts</h2>
+      <form id="feedbackForm" action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="feedback">Your Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="4" placeholder="We value your thoughts..." required></textarea>
+
+        <button type="submit" class="btn">Submit Feedback</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Mindfulness and Relaxation Hub</p>
+  </footer>
+
+  <script src="scripts/script.js" defer></script>
+</body>
+</html>
